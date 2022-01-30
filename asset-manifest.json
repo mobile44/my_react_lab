@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/my_react_lab/static/css/main.073c9b0a.css",
-    "main.js": "/my_react_lab/static/js/main.bfdd1fbf.js",
+    "main.css": "/my_react_lab/static/css/main.afda0329.css",
+    "main.js": "/my_react_lab/static/js/main.44433877.js",
     "static/js/787.4d701308.chunk.js": "/my_react_lab/static/js/787.4d701308.chunk.js",
-    "static/media/logo.svg": "/my_react_lab/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/strawberry.jpg": "/my_react_lab/static/media/strawberry.ae609eb605665af3adf2.jpg",
+    "static/media/coffeebean.jpg": "/my_react_lab/static/media/coffeebean.fd7c64e8d68786733e4c.jpg",
     "index.html": "/my_react_lab/index.html",
-    "main.073c9b0a.css.map": "/my_react_lab/static/css/main.073c9b0a.css.map",
-    "main.bfdd1fbf.js.map": "/my_react_lab/static/js/main.bfdd1fbf.js.map",
+    "main.afda0329.css.map": "/my_react_lab/static/css/main.afda0329.css.map",
+    "main.44433877.js.map": "/my_react_lab/static/js/main.44433877.js.map",
     "787.4d701308.chunk.js.map": "/my_react_lab/static/js/787.4d701308.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.bfdd1fbf.js"
+    "static/css/main.afda0329.css",
+    "static/js/main.44433877.js"
   ]
 }
