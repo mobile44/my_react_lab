@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+.appBody {
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.appNav {
+  height: 100%;
+  /*width: 160px;*/
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.5s
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
   color: white;
+  padding: 10px 15px;
+  border: none;
 }
-
-.App-link {
-  color: #61dafb;
+.navbtn:hover {
+  color: #818181;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.appNav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+.appNav a:hover {
+  color: #f1f1f1;
+}
+.appContent {
+  /*margin-left: 160px;*/ /* Same as the width of the sidenav */
+  /*font-size: 28px;*/ /* Increased text to enable scrolling */
+  /*padding: 0px 10px;*/
+  transition: margin-left .5s;
 }
