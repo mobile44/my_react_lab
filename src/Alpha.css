@@ -15,7 +15,12 @@
   font-size: 50px;
   text-align: center;
   line-height: 100vh;
+}
+.alphaContent {
   background-color: navy;
+}
+.alphaContent2 {
+  background-color: chocolate;
 }
 .alphaMask, .alphaMask2 {
   position: absolute;
