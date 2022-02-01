@@ -3,8 +3,8 @@ import { gsap } from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import strawberry from "./images/strawberry.jpg";
 import coffeebean from "./images/coffeebean.jpg";
-import grass from "./images/grass.jpg";
-import grassbw from "./images/grassbw.jpg";
+import peak from "./images/peak.jpg";
+import forest from "./images/forest.jpg";
 import "./Alpha.css";
 
 function Alpha() {
@@ -36,20 +36,19 @@ function Alpha() {
           scrub: 0.5,
         }
     });
-
   },[]);
   
   return (
     <div className="alphaPage">
       <section className="alphaRevealer" ref={ref}>
         <div className="alphaMask">
-          <img src={coffeebean} alt="boat"/>
+          <img src={coffeebean} alt="coffeebean"/>
         </div>
         <div className="alphaMask">
-          <img src={strawberry} alt="wave"/>
+          <img src={strawberry} alt="strawberry"/>
         </div>
         <div className="alphaOverlay">
-          Our life needs delicious
+          Sweetness VS Bitterness
         </div>
       </section>
       <section className="alphaContent">
@@ -57,13 +56,13 @@ function Alpha() {
       </section>
       <section className="alphaRevealer2" ref={ref2}>
         <div className="alphaMask2">
-          <img src={grass} alt="grass"/>
+          <img src={forest} alt="forest"/>
         </div>
         <div className="alphaMask2">
-          <img src={grassbw} alt="grassbw"/>
+          <img src={peak} alt="peak"/>
         </div>
         <div className="alphaOverlay2">
-          Our world is colorful
+          Aloofness VS Vitality
         </div>
       </section>
       <section className="alphaContent2">

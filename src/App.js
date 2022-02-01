@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {BrowserRouter,Route,Routes,Link} from "react-router-dom";
 import './App.css';
 import Alpha from './Alpha';
+import Beta from './Beta';
 
 function App() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -35,14 +36,19 @@ function App() {
         <div id="appNav" className="appNav" style={navwidth}>
           <button className="navbtn" onClick={toggleNav}>&#9776;</button>
           <Link to="/">&#913;{toggleMenu?"--Alpha":""}</Link>
-          <Link to="/">&#914;{toggleMenu?"--Beta":""}</Link>
+          <Link to="/beta">&#914;{toggleMenu?"--Beta":""}</Link>
           <Link to="/">&#915;{toggleMenu?"--Gamma":""}</Link>
           <Link to="/">&#916;{toggleMenu?"--Delta":""}</Link>
+          <Link to="/">&#917;{toggleMenu?"--Epsilon":""}</Link>
+          <Link to="/">&#918;{toggleMenu?"--Zeta":""}</Link>
+          <Link to="/">&#919;{toggleMenu?"--Eta":""}</Link>
+          <Link to="/">&#920;{toggleMenu?"--Theta":""}</Link>
         </div>
         <div id="appContent" className="appContent" style={contentwidth}>
           <Routes>
             <Route path="/" element={<Alpha />} />
             <Route path="/my_react_lab/" element={<Alpha />} />
+            <Route path="/beta" element={<Beta />} />
           </Routes>
         </div>
       </div>
