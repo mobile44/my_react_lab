@@ -3,6 +3,7 @@ import {BrowserRouter,Route,Routes,Link} from "react-router-dom";
 import './App.css';
 import Alpha from './Alpha';
 import Beta from './Beta';
+import Gamma from './Gamma';
 
 function App() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -37,7 +38,7 @@ function App() {
           <button className="navbtn" onClick={toggleNav}>&#9776;</button>
           <Link to="/">&#913;{toggleMenu?"--Alpha":""}</Link>
           <Link to="/beta">&#914;{toggleMenu?"--Beta":""}</Link>
-          <Link to="/">&#915;{toggleMenu?"--Gamma":""}</Link>
+          <Link to="/gamma">&#915;{toggleMenu?"--Gamma":""}</Link>
           <Link to="/">&#916;{toggleMenu?"--Delta":""}</Link>
           <Link to="/">&#917;{toggleMenu?"--Epsilon":""}</Link>
           <Link to="/">&#918;{toggleMenu?"--Zeta":""}</Link>
@@ -49,6 +50,7 @@ function App() {
             <Route path="/" element={<Alpha />} />
             <Route path="/my_react_lab/" element={<Alpha />} />
             <Route path="/beta" element={<Beta />} />
+            <Route path="/gamma" element={<Gamma />} />
           </Routes>
         </div>
       </div>

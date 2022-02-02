@@ -4,28 +4,31 @@
   color: white;
   overflow-x: hidden;
 }
-h1, h2 {
+.betaP {
+  font-size: 30px;
   font-weight: 400;
   max-width: none;
+  font-family: 'Playfair Display', serif;
 }
-.comparisonSection {
+.betaSection {
+  width: 90%;
   position: relative;
   padding-bottom: 56.25%; /* to maintain aspect ratio (responsive!) */
 }
-.comparisonImage {
+.betaImage {
   width: 100%;
   height: 100%;
 }
-.afterImage {
+.betaAfter {
   position: absolute;
   overflow: hidden;
   top: 0;
   transform: translate(100%, 0px);
 }
-.afterImage img {
+.betaAfter img {
   transform: translate(-100%, 0px);
 }
-.comparisonImage img {
+.betaImage img {
   width: 100%;
   height: 100%;
   position: absolute;

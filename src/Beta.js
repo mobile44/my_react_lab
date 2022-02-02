@@ -8,7 +8,7 @@ import "./Beta.css";
 function Beta() {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(()=>{
-    gsap.utils.toArray(".comparisonSection").forEach(section => {
+    gsap.utils.toArray(".betaSection").forEach(section => {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
@@ -20,23 +20,23 @@ function Beta() {
         },
         defaults: {ease: "none"}
       });
-      tl.fromTo(section.querySelector(".afterImage"), { xPercent: 100, x: 0}, {xPercent: 0})
-        .fromTo(section.querySelector(".afterImage img"), {xPercent: -100, x: 0}, {xPercent: 0}, 0);
+      tl.fromTo(section.querySelector(".betaAfter"), { xPercent: 100, x: 0}, {xPercent: 0})
+        .fromTo(section.querySelector(".betaAfter img"), {xPercent: -100, x: 0}, {xPercent: 0}, 0);
     });
 
   },[]);
   return (
     <div className="betaPage">
-      <h1 className="header-section">What we want to see?</h1>
-      <section className="comparisonSection">
-        <div className="comparisonImage beforeImage">
+      <p className="betaP">What we want to see?</p>
+      <section className="betaSection">
+        <div className="betaImage betaBefore">
             <img src={grassbw} alt="before"/>
         </div>
-        <div className="comparisonImage afterImage">
+        <div className="betaImage betaAfter">
             <img src={grass} alt="after"/>
         </div>
       </section>
-      <h1 className="header-section">Memorize the past to look forward...</h1>
+      <p className="betaP">Memorize the past to look forward...</p>
     </div>
   )
 }
