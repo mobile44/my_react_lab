@@ -36,9 +36,9 @@ function App() {
       <div className="appBody">
         <div id="appNav" className="appNav" style={navwidth}>
           <button className="navbtn" onClick={toggleNav}>&#9776;</button>
-          <Link to="/">&#913;{toggleMenu?"--Alpha":""}</Link>
-          <Link to="/beta">&#914;{toggleMenu?"--Beta":""}</Link>
-          <Link to="/gamma">&#915;{toggleMenu?"--Gamma":""}</Link>
+          <Link to="/my_react_lab">&#913;{toggleMenu?"--Alpha":""}</Link>
+          <Link to="/my_react_lab/beta">&#914;{toggleMenu?"--Beta":""}</Link>
+          <Link to="/my_react_lab/gamma">&#915;{toggleMenu?"--Gamma":""}</Link>
           <Link to="/">&#916;{toggleMenu?"--Delta":""}</Link>
           <Link to="/">&#917;{toggleMenu?"--Epsilon":""}</Link>
           <Link to="/">&#918;{toggleMenu?"--Zeta":""}</Link>
@@ -49,8 +49,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Alpha />} />
             <Route path="/my_react_lab/" element={<Alpha />} />
-            <Route path="/beta" element={<Beta />} />
-            <Route path="/gamma" element={<Gamma />} />
+            <Route path="/my_react_lab/beta" element={<Beta />} />
+            <Route path="/my_react_lab/gamma" element={<Gamma />} />
           </Routes>
         </div>
       </div>
