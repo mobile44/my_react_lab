@@ -4,6 +4,7 @@ import './App.css';
 import Alpha from './Alpha';
 import Beta from './Beta';
 import Gamma from './Gamma';
+import Delta from './Delta';
 
 function App() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -18,6 +19,13 @@ function App() {
     } else {
       setNavWidth({width: "200px"});
       setContentWidth({marginLeft: "200px"});
+    }
+  }
+  const collapseNav = () => {
+    if (toggleMenu) {
+      setToggleMenu(!toggleMenu);
+      setNavWidth({width: "150px"});
+      setContentWidth({marginLeft: "150px"});
     }
   }
   useEffect(() => {
@@ -36,10 +44,10 @@ function App() {
       <div className="appBody">
         <div id="appNav" className="appNav" style={navwidth}>
           <button className="navbtn" onClick={toggleNav}>&#9776;</button>
-          <Link to="/my_react_lab">&#913;{toggleMenu?"--Alpha":""}</Link>
-          <Link to="/my_react_lab/beta">&#914;{toggleMenu?"--Beta":""}</Link>
-          <Link to="/my_react_lab/gamma">&#915;{toggleMenu?"--Gamma":""}</Link>
-          <Link to="/">&#916;{toggleMenu?"--Delta":""}</Link>
+          <Link to="/my_react_lab" onClick={collapseNav}>&#913;{toggleMenu?"--Alpha":""}</Link>
+          <Link to="/my_react_lab/beta" onClick={collapseNav}>&#914;{toggleMenu?"--Beta":""}</Link>
+          <Link to="/my_react_lab/gamma" onClick={collapseNav}>&#915;{toggleMenu?"--Gamma":""}</Link>
+          <Link to="/my_react_lab/delta" onClick={collapseNav}>&#916;{toggleMenu?"--Delta":""}</Link>
           <Link to="/">&#917;{toggleMenu?"--Epsilon":""}</Link>
           <Link to="/">&#918;{toggleMenu?"--Zeta":""}</Link>
           <Link to="/">&#919;{toggleMenu?"--Eta":""}</Link>
@@ -51,6 +59,7 @@ function App() {
             <Route path="/my_react_lab/" element={<Alpha />} />
             <Route path="/my_react_lab/beta" element={<Beta />} />
             <Route path="/my_react_lab/gamma" element={<Gamma />} />
+            <Route path="/my_react_lab/delta" element={<Delta />} />
           </Routes>
         </div>
       </div>
