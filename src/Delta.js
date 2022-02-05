@@ -24,7 +24,7 @@ function Delta() {
       backgroundColor: "#FFA500",
       ease: "none"
     });
-  })
+  },[]);
   
 
   /*
