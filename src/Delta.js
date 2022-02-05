@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Linechart from "./hooks/Linechart";
 import Barchart from "./hooks/Barchart";
 import { lineChartData,barChartData } from "./data/Datad3";
 import "./Delta.css";
-import { useEffect } from "react/cjs/react.development";
 
 function Delta() {
   gsap.registerPlugin(ScrollTrigger);
@@ -13,7 +12,7 @@ function Delta() {
   const [groupColour, setGroupColour] = useState("lightgrey");
   const lineGroupunique = lineChartData.map((obj)=>{return obj.group}).filter((item, index,arr)=>{return arr.indexOf(item)===index});
   const barGroupunique = barChartData.map((obj)=>{return obj.group}).filter((item, index,arr)=>{return arr.indexOf(item)===index});
-  
+
   useEffect(()=>{
     gsap.from(".line2", {
       scrollTrigger: {
@@ -25,7 +24,6 @@ function Delta() {
       ease: "none"
     });
   },[]);
-  
 
   /*
   function updateBarChart(group, colour) {
