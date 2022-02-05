@@ -126,7 +126,7 @@ const Linechart = props => {
         x={22}
         y={-2}
       >
-        Performance 2012
+        Performance 2012 ({selectedGroup})
       </text>
       <text
         textAnchor="middle"

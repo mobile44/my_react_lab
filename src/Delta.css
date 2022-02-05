@@ -1,5 +1,7 @@
 .deltaLine {
-  margin-top: 10px;
+  padding-top: 10px;
+  background-color: rgb(230, 93, 93);
+  height: 700px;
 }
 .deltaRadio {
   display: block;
@@ -28,4 +30,19 @@
 }
 .deltaRadio input:checked ~ .deltaLabel {
   background-color: #2196F3;
+}
+.deltaDemo p {
+  margin: 0;
+  text-align: center;
+}
+.line1 {
+  background-color: rgb(230, 93, 93);
+}
+.deltaBar {
+  padding-top: 10px;
+  background-color: rgb(118, 93, 230);
+  height: 700px;
+}
+.line2 {
+  background-color: rgb(118, 93, 230);  
 }
