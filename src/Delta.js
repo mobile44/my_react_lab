@@ -60,7 +60,7 @@ function Delta() {
             <span className="deltaLabel"></span>
           </label>
         ))}
-        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYmid meet">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
           <Barchart
             positionX={20}
             positionY={40}
