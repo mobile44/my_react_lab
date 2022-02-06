@@ -1,65 +1,84 @@
-.alphaPage {
-  background: black;
-  color: white;
+@media screen and (min-width: 900px){
+  .alphaPage {
+    background: black;
+    color: white;
+  }
+  .alphaRevealer, .alphaRevealer2 {
+    position: relative;
+    height: 100vh;
+    font-size: 50px;
+    text-align: center;
+    line-height: 100vh;
+  }
+  .alphaContent, .alphaContent2 {
+    position: relative;
+    height: 100vh;
+    font-size: 50px;
+    text-align: center;
+    line-height: 100vh;
+  }
+  .alphaContent {
+    background-color: navy;
+  }
+  .alphaContent2 {
+    background-color: chocolate;
+  }
+  .alphaMask, .alphaMask2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  .alphaMask img, .alphaMask2 img {
+    height: 100vh;
+  }
+  .alphaOverlay, .alphaOverlay2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
 }
-.alphaRevealer, .alphaRevealer2 {
-  position: relative;
-  height: 100vh;
-  font-size: 50px;
-  text-align: center;
-  line-height: 100vh;
-}
-.alphaContent, .alphaContent2, .alphaContent3 {
-  position: relative;
-  height: 100vh;
-  font-size: 50px;
-  text-align: center;
-  line-height: 100vh;
-}
-.alphaContent {
-  background-color: navy;
-}
-.alphaContent2 {
-  background-color: chocolate;
-}
-.alphaContent3 {
-  background-color:forestgreen;
-}
-.alphaMask, .alphaMask2 {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-.alphaMask img, .alphaMask2 img {
-  height: 100vh;
-}
-.alphaOverlay, .alphaOverlay2, .alphaOverlay3 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.alphaSection {
-  position: relative;
-}
-.alphaImage {
-  width: 100%;
-  height: 100%;
-}
-.alphaAfter {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  transform: translate(100%,0px);
-}
-.alphaAfter img {
-  transform: translate(-100%,0px);
-}
-.alphaImage img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
+@media screen and (max-width: 900px){
+  .alphaPage {
+    background: black;
+    color: white;
+  }
+  .alphaRevealer, .alphaRevealer2 {
+    position: relative;
+    font-size: 8vh; /*50px*/
+    text-align: center;
+    height: 100vh; /*vh*/
+    line-height: 100vh; /*vh*/
+  }
+  .alphaMask, .alphaMask2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  .alphaMask img, .alphaMask2 img {
+    height: 100vh; /*vh*/
+  }
+  .alphaOverlay, .alphaOverlay2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .alphaContent, .alphaContent2 {
+    position: relative;
+    font-size: 8vh; /*50px*/
+    text-align: center;
+    height: 100vh; /*vh*/
+    line-height: 100vh; /*vh*/
+  }
+  .alphaContent {
+    background-color: navy;
+  }
+  .alphaContent2 {
+    background-color: chocolate;
+  }
 }

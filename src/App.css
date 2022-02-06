@@ -1,42 +1,80 @@
-.appBody {
-  margin: 0;
+@media screen and (min-width: 900px){
+  .appBody {
+    margin: 0;
+  }
+  .appNav {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.5s
+  }
+  .navbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  .navbtn:hover {
+    color: #818181;
+  }
+  .appNav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  .appNav a:hover {
+    color: #f1f1f1;
+  }
+  .appContent {
+    transition: margin-left .5s;
+  }
 }
-.appNav {
-  height: 100%;
-  /*width: 160px;*/
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-  transition: 0.5s
-}
-.navbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-.navbtn:hover {
-  color: #818181;
-}
-.appNav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-}
-.appNav a:hover {
-  color: #f1f1f1;
-}
-.appContent {
-  /*margin-left: 160px;*/ /* Same as the width of the sidenav */
-  /*font-size: 28px;*/ /* Increased text to enable scrolling */
-  /*padding: 0px 10px;*/
-  transition: margin-left .5s;
+@media screen and (max-width: 900px){
+  .mnavbtn {
+    position: absolute;
+    width: 60px;
+    transition: 0.3s;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px;
+    opacity: 0.3;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    z-index: 2;
+    position: fixed;
+  }
+  .mappNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .mappNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .mappNav a:hover {
+    color: #f1f1f1;
+  }
 }

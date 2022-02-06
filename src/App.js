@@ -11,6 +11,9 @@ function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [navwidth, setNavWidth] = useState({width: "150px"});
   const [contentwidth, setContentWidth] = useState({marginLeft: "150px"});
+  const [mtoggleMenu, setMToggleMenu] = useState(false);
+  const [mnavWidth, setMNavWidth] = useState({width: "0px"});
+  
   const toggleNav = () => {
     setToggleMenu(!toggleMenu);
     if (toggleMenu) {
@@ -19,6 +22,14 @@ function App() {
     } else {
       setNavWidth({width: "200px"});
       setContentWidth({marginLeft: "200px"});
+    }
+  }
+  const mtoggleNav = () => {
+    setMToggleMenu(!mtoggleMenu);
+    if (mtoggleMenu) {
+      setMNavWidth({width: "0px"});
+    } else {
+      setMNavWidth({width: "180px"});
     }
   }
   const collapseNav = () => {
@@ -63,6 +74,31 @@ function App() {
               <Route path="/my_react_lab/gamma" element={<Gamma />} />
               <Route path="/my_react_lab/delta" element={<Delta />} />
               </Routes>
+          </div>
+        </div>
+      </BrowserRouter>
+    )}
+    {(screenWidth<900) && (
+      <BrowserRouter>
+        <div className="mappBody">
+          <div className="mappNav" style={mnavWidth}>
+            <Link to="/my_react_lab" onClick={mtoggleNav} id="about">&#913;--Alpha</Link>
+            <Link to="/my_react_lab/beta" onClick={mtoggleNav} id="blog">&#914;--Beta</Link>
+            <Link to="/my_react_lab/gamma" onClick={mtoggleNav} id="projects">&#915;--Gamma</Link>
+            <Link to="/my_react_lab/delta" onClick={mtoggleNav} id="contact">&#916;--Delta</Link>
+          </div>
+          <div className="mappNavbtnsection">
+          <button className="mnavbtn" onMouseOver={mtoggleNav}>&#9776;</button>
+          </div>
+
+          <div className="mappContent">
+            <Routes>
+              <Route path="/" element={<Alpha />} />
+              <Route path="/my_react_lab/" element={<Alpha />} />
+              <Route path="/my_react_lab/beta" element={<Alpha />} />
+              <Route path="/my_react_lab/gamma" element={<Alpha />} />
+              <Route path="/my_react_lab/delta" element={<Alpha />} />
+            </Routes>
           </div>
         </div>
       </BrowserRouter>
