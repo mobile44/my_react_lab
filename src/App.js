@@ -40,30 +40,34 @@ function App() {
     }
   },[])
   return (
-    <BrowserRouter>
-      <div className="appBody">
-        <div id="appNav" className="appNav" style={navwidth}>
-          <button className="navbtn" onClick={toggleNav}>&#9776;</button>
-          <Link to="/my_react_lab" onClick={collapseNav}>&#913;{toggleMenu?"--Alpha":""}</Link>
-          <Link to="/my_react_lab/beta" onClick={collapseNav}>&#914;{toggleMenu?"--Beta":""}</Link>
-          <Link to="/my_react_lab/gamma" onClick={collapseNav}>&#915;{toggleMenu?"--Gamma":""}</Link>
-          <Link to="/my_react_lab/delta" onClick={collapseNav}>&#916;{toggleMenu?"--Delta":""}</Link>
-          <Link to="/">&#917;{toggleMenu?"--Epsilon":""}</Link>
-          <Link to="/">&#918;{toggleMenu?"--Zeta":""}</Link>
-          <Link to="/">&#919;{toggleMenu?"--Eta":""}</Link>
-          <Link to="/">&#920;{toggleMenu?"--Theta":""}</Link>
+    <div>
+    {(screenWidth>=900) && (
+      <BrowserRouter>
+        <div className="appBody">
+          <div id="appNav" className="appNav" style={navwidth}>
+            <button className="navbtn" onClick={toggleNav}>&#9776;</button>
+            <Link to="/my_react_lab" onClick={collapseNav}>&#913;{toggleMenu?"--Alpha":""}</Link>
+            <Link to="/my_react_lab/beta" onClick={collapseNav}>&#914;{toggleMenu?"--Beta":""}</Link>
+            <Link to="/my_react_lab/gamma" onClick={collapseNav}>&#915;{toggleMenu?"--Gamma":""}</Link>
+            <Link to="/my_react_lab/delta" onClick={collapseNav}>&#916;{toggleMenu?"--Delta":""}</Link>
+            <Link to="/">&#917;{toggleMenu?"--Epsilon":""}</Link>
+            <Link to="/">&#918;{toggleMenu?"--Zeta":""}</Link>
+            <Link to="/">&#919;{toggleMenu?"--Eta":""}</Link>
+            <Link to="/">&#920;{toggleMenu?"--Theta":""}</Link>
+          </div>
+          <div id="appContent" className="appContent" style={contentwidth}>
+              <Routes>
+              <Route path="/" element={<Alpha />} />
+              <Route path="/my_react_lab/" element={<Alpha />} />
+              <Route path="/my_react_lab/beta" element={<Beta />} />
+              <Route path="/my_react_lab/gamma" element={<Gamma />} />
+              <Route path="/my_react_lab/delta" element={<Delta />} />
+              </Routes>
+          </div>
         </div>
-        <div id="appContent" className="appContent" style={contentwidth}>
-          <Routes>
-            <Route path="/" element={<Alpha />} />
-            <Route path="/my_react_lab/" element={<Alpha />} />
-            <Route path="/my_react_lab/beta" element={<Beta />} />
-            <Route path="/my_react_lab/gamma" element={<Gamma />} />
-            <Route path="/my_react_lab/delta" element={<Delta />} />
-          </Routes>
-        </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    )}
+    </div>
   );
 }
 

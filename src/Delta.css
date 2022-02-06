@@ -46,3 +46,11 @@
 .line2 {
   background-color: rgb(118, 93, 230);  
 }
+.deltaDonut {
+  padding-top: 10px;
+  background-color: rgb(6, 102, 35);
+  height: 700px;
+}
+.line3 {
+  background-color: rgb(6, 102, 35);  
+}
