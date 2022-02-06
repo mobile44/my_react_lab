@@ -20,7 +20,7 @@ function Alpha() {
           trigger: ".alphaRevealer",
           start: "top top",
           pin: true,
-          end: "+=100%",
+          end: "+=100vh", /*100%*/
           scrub: 0.5,
         }
     });
@@ -32,7 +32,7 @@ function Alpha() {
           trigger: ".alphaRevealer2",
           start: "top top",
           pin: true,
-          end: "+=100%",
+          end: "+=100vh", /*100%*/
           scrub: 0.5,
         }
     });

@@ -1,3 +1,4 @@
+@media screen and (min-width: 900px){
 .betaPage {
   height: 300vh;
   background-color: #111;
@@ -5,13 +6,13 @@
   overflow-x: hidden;
 }
 .betaP {
-  font-size: 30px;
+  font-size: 30px; /*30px*/
   font-weight: 400;
   max-width: none;
   font-family: 'Playfair Display', serif;
 }
 .betaSection {
-  width: 80%;
+  width: 80%; /*80%*/
   position: relative;
   padding-bottom: 56.25%; /* to maintain aspect ratio (responsive!) */
 }
@@ -33,4 +34,44 @@
   height: 100%;
   position: absolute;
   top: 0;
+}
+}
+@media screen and (max-width: 900px){
+  .betaPage {
+    /*height: 300vh;*/
+    background-color: #111;
+    color: white;
+    overflow-x: hidden;
+  }
+  .betaP {
+    font-size: 8vw; /*30px*/
+    font-weight: 400;
+    max-width: none;
+    font-family: 'Playfair Display', serif;
+    padding: 250px 0;
+  }
+  .betaSection {
+    width: 100vw; /*80%*/
+    position: relative;
+    /*padding-bottom: 56.25%;*/ /* to maintain aspect ratio (responsive!) */
+  }
+  .betaImage {
+    width: 100vw; /*100%*/
+    height: 100vh; /*100%*/
+  }
+  .betaAfter {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    transform: translate(100vw, 0px); /*100%*/
+  }
+  .betaAfter img {
+    transform: translate(-100vw, 0px); /*-100%*/
+  }
+  .betaImage img {
+    width: 100vw; /*100%*/
+    /*height: 100%;*/ /*100%*/
+    position: absolute;
+    top: 0;
+  }
 }
