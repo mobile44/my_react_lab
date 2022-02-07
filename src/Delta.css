@@ -1,56 +1,151 @@
-.deltaLine {
-  padding-top: 10px;
+.deltaPage {
   background-color: rgb(230, 93, 93);
-  height: 700px;
+}
+.deltaTitle {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 60px;
+}
+.deltaRadios {
+  padding: 10px;
+  text-align: center;
 }
 .deltaRadio {
-  display: block;
+  /*display: block;*/
   position: relative;
-  padding-left: 80px;
+  /*padding-left: 80px;*/
   cursor: pointer;
-  font-size: 22px;
+  /*font-size: 22px;*/
   user-select: none;
 }
 .deltaRadio input {
-  position: absolute;
-  opacity: 0;
+  /*position: absolute;*/
+  opacity: 0.5;
   cursor: pointer;
 }
-.deltaLabel {
-  position: absolute;
-  top: 5px;
-  left: 30px;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
+.deltaRadio:hover {
+    color: #ccc;
+  }
+@media screen and (min-width: 900px){
+  /*
+  .deltaPage {
+    box-sizing: border-box;
+  }
+  .deltaSection {
+    padding-top: 50px;
+    height: 300px;
+  }
+  .deltaLine {
+    background-color: rgb(230, 93, 93);
+  }
+  .deltaBar {
+    background-color: rgb(118, 93, 230);
+  }
+  .deltaDonut {
+    background-color: rgb(6, 102, 35);
+  }
+  .deltaSection::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .deltaCol {
+    padding-top: 10px;
+    float: left;
+  }
+  .deltaRadios {
+    width: 30%;
+  }
+  .deltaSVG {
+    width: 70%;
+  }
+  .deltaRadio {
+    display: block;
+    position: relative;
+    padding-left: 80px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+  }
+  .deltaRadio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .deltaLabel {
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  .deltaRadio:hover input ~ .deltaLabel {
+    background-color: #ccc;
+  }
+  .deltaRadio input:checked ~ .deltaLabel {
+    background-color: #2196F3;
+  }
+  .deltaDemo {
+    margin: 0;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .title1 {
+    background-color: rgb(230, 93, 93);
+  }
+  .title2 {
+    background-color: rgb(118, 93, 230);  
+  }
+  .title3 {
+    background-color: rgb(6, 102, 35);  
+  }
+  */
 }
-.deltaRadio:hover input ~ .deltaLabel {
-  background-color: #ccc;
-}
-.deltaRadio input:checked ~ .deltaLabel {
-  background-color: #2196F3;
-}
-.deltaDemo p {
-  margin: 0;
-  text-align: center;
-}
-.line1 {
-  background-color: rgb(230, 93, 93);
-}
-.deltaBar {
-  padding-top: 10px;
-  background-color: rgb(118, 93, 230);
-  height: 700px;
-}
-.line2 {
-  background-color: rgb(118, 93, 230);  
-}
-.deltaDonut {
-  padding-top: 10px;
-  background-color: rgb(6, 102, 35);
-  height: 700px;
-}
-.line3 {
-  background-color: rgb(6, 102, 35);  
+@media screen and (max-width: 900px){
+  /*
+  .deltaPage {
+    box-sizing: border-box;
+  }
+  .deltaLine::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .deltaDemo p {
+    margin: 0;
+    text-align: center;
+  }
+  .deltaLineSVG {
+    width: 70%;
+  }
+  .deltaLineRadios {
+    position: relative;
+    top: 50px;
+    left: 30px;
+    width: 25%;
+  }
+  .deltaLineCol {
+    float: left;
+  }
+  .deltaRadio {
+    display: block;
+  }
+  .deltaBar::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .deltaBarRadios, .deltaBarSVG {
+    width: 100%;
+  }
+  .deltaBarRadios {
+    position: relative;
+    left: 0px;
+    background-color: #2196F3;
+  }
+  */
 }

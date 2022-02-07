@@ -15,18 +15,18 @@ function Delta() {
   const barGroupunique = barChartData.map((obj)=>{return obj.group}).filter((item, index,arr)=>{return arr.indexOf(item)===index});
 
   useEffect(()=>{
-    gsap.from(".line2", {
+    gsap.from(".title2", {
       scrollTrigger: {
-        trigger: ".line2",
+        trigger: ".title2",
         scrub: true,
       },
       duration: 1,
       backgroundColor: "#FFA500",
       ease: "none"
     });
-    gsap.from(".line3", {
+    gsap.from(".title3", {
       scrollTrigger: {
-        trigger: ".line3",
+        trigger: ".title3",
         scrub: true,
       },
       duration: 1,
@@ -41,50 +41,81 @@ function Delta() {
   }
   return (
     <div className="deltaPage">
-      <div className="deltaDemo line1"><p><span>Line Chart Demo</span></p></div>
-      <div className="deltaLine">
+      <div className="deltaTitle">Charts Demo</div>
+      <div className="deltaRadios">
         {lineGroupunique && lineGroupunique.map((k,i)=>(
           <label className="deltaRadio" key={i}>{k}
             <input key={i} type="radio" value={i} checked={selectedGroup === k} onChange={()=>setSelectedGroup(k)} />
             <span className="deltaLabel"></span>
           </label>
         ))}
-        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-          <Linechart
-            positionX={20}
-            positionY={5}
-            selectedGroup={selectedGroup}
-            lineColour={groupColour}
-          />
-        </svg>
       </div>
-      <div className="deltaDemo line2"><p><span>Bar Chart Demo</span></p></div>
-      <div className="deltaBar">
-        {barGroupunique && barGroupunique.map((k,i)=>(
-          <label className="deltaRadio" key={i}>{k}
-            <input key={i} type="radio" value={i} checked={selectedGroup === k} onChange={()=>setSelectedGroup(k)} />
-            <span className="deltaLabel"></span>
-          </label>
-        ))}
-        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-          <Barchart
-            positionX={20}
-            positionY={40}
-            width={80}
-            height={100}
-            selectedGroup={selectedGroup}
-            barColour={groupColour}
-          />
+      <svg viewBox="0 0 85 85" preserveAspectRatio="xMidYMid meet">
+        <Donutchart x={40} y={20} onChangeGroup={updateBarChart} />
+        <Linechart
+          positionX={20}
+          positionY={40}
+          selectedGroup={selectedGroup}
+          lineColour={groupColour}
+        />
+        <Barchart
+          positionX={20}
+          positionY={85}
+          width={80}
+          height={100}
+          selectedGroup={selectedGroup}
+          barColour={groupColour}
+        />
         </svg>
+    </div>
+    /*
+    <div className="deltaPage">
+      <div className="deltaDemo title1">Line Chart Demo</div>
+      <div className="deltaSection deltaLine">
+        <div className="deltaCol deltaRadios">
+          {lineGroupunique && lineGroupunique.map((k,i)=>(
+            <label className="deltaRadio" key={i}>{k}
+              <input key={i} type="radio" value={i} checked={selectedGroup === k} onChange={()=>setSelectedGroup(k)} />
+              <span className="deltaLabel"></span>
+            </label>
+          ))}
+        </div>
+        <div className="deltaCol deltaSVG">
+          <svg viewBox="0 0 70 70" preserveAspectRatio="xMidYMid meet">
+            <Linechart
+              positionX={1}
+              positionY={7}
+              selectedGroup={selectedGroup}
+              lineColour={groupColour}
+            />
+          </svg>
+        </div>
       </div>
-      <div className="deltaDemo line3"><p><span>Donut Chart Demo</span></p></div>
-      <div className="deltaDonut">{/* 
-        {barGroupunique && barGroupunique.map((k,i)=>(
-          <label className="deltaRadio" key={i}>{k}
-            <input key={i} type="radio" value={i} checked={selectedGroup === k} onChange={()=>setSelectedGroup(k)} />
-            <span className="deltaLabel"></span>
-          </label>
-        ))}*/}
+      <div className="deltaDemo title2">Bar Chart Demo</div>
+      <div className="deltaSection deltaBar">
+        <div className="deltaCol deltaRadios">
+          {barGroupunique && barGroupunique.map((k,i)=>(
+            <label className="deltaRadio" key={i}>{k}
+              <input key={i} type="radio" value={i} checked={selectedGroup === k} onChange={()=>setSelectedGroup(k)} />
+              <span className="deltaLabel"></span>
+            </label>
+          ))}
+        </div>
+        <div className="deltaCol deltaSVG">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+            <Barchart
+              positionX={30}
+              positionY={40}
+              width={80}
+              height={100}
+              selectedGroup={selectedGroup}
+              barColour={groupColour}
+            />
+          </svg>
+        </div>
+      </div>
+      <div className="deltaDemo title3">Donut Chart Demo</div>
+      <div className="deltaSection deltaDonut">
         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
         <Donutchart x={15} y={20} onChangeGroup={updateBarChart} />
         <Barchart
@@ -104,6 +135,7 @@ function Delta() {
         </svg>
       </div>
     </div>
+    */
 
   )
 

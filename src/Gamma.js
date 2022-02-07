@@ -20,9 +20,11 @@ function Gamma() {
   const iluoverlay = {
     backgroundImage: `url(${ilu_overlay})`,
   };
+  /*
   const ilufull = {
     backgroundImage: `url(${ilu_full})`,
   };
+  */
   const ilu01 = {
     backgroundImage: `url(${ilu_01})`,
   };

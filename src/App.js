@@ -96,8 +96,8 @@ function App() {
               <Route path="/" element={<Alpha />} />
               <Route path="/my_react_lab/" element={<Alpha />} />
               <Route path="/my_react_lab/beta" element={<Beta />} />
-              <Route path="/my_react_lab/gamma" element={<Alpha />} />
-              <Route path="/my_react_lab/delta" element={<Alpha />} />
+              <Route path="/my_react_lab/gamma" element={<Gamma />} />
+              <Route path="/my_react_lab/delta" element={<Delta />} />
             </Routes>
           </div>
         </div>
