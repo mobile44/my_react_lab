@@ -5,6 +5,7 @@ import Alpha from './Alpha';
 import Beta from './Beta';
 import Gamma from './Gamma';
 import Delta from './Delta';
+import Epsilon from './Epsilon';
 
 function App() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -61,7 +62,7 @@ function App() {
             <Link to="/my_react_lab/beta" onClick={collapseNav}>&#914;{toggleMenu?"--Beta":""}</Link>
             <Link to="/my_react_lab/gamma" onClick={collapseNav}>&#915;{toggleMenu?"--Gamma":""}</Link>
             <Link to="/my_react_lab/delta" onClick={collapseNav}>&#916;{toggleMenu?"--Delta":""}</Link>
-            <Link to="/">&#917;{toggleMenu?"--Epsilon":""}</Link>
+            <Link to="/my_react_lab/epsilon" onClick={collapseNav}>&#917;{toggleMenu?"--Epsilon":""}</Link>
             <Link to="/">&#918;{toggleMenu?"--Zeta":""}</Link>
             <Link to="/">&#919;{toggleMenu?"--Eta":""}</Link>
             <Link to="/">&#920;{toggleMenu?"--Theta":""}</Link>
@@ -73,6 +74,7 @@ function App() {
               <Route path="/my_react_lab/beta" element={<Beta />} />
               <Route path="/my_react_lab/gamma" element={<Gamma />} />
               <Route path="/my_react_lab/delta" element={<Delta />} />
+              <Route path="/my_react_lab/epsilon" element={<Epsilon />} />
               </Routes>
           </div>
         </div>
@@ -82,10 +84,11 @@ function App() {
       <BrowserRouter>
         <div className="mappBody">
           <div className="mappNav" style={mnavWidth}>
-            <Link to="/my_react_lab" onClick={mtoggleNav} id="about">&#913;--Alpha</Link>
-            <Link to="/my_react_lab/beta" onClick={mtoggleNav} id="blog">&#914;--Beta</Link>
-            <Link to="/my_react_lab/gamma" onClick={mtoggleNav} id="projects">&#915;--Gamma</Link>
-            <Link to="/my_react_lab/delta" onClick={mtoggleNav} id="contact">&#916;--Delta</Link>
+            <Link to="/my_react_lab" onClick={mtoggleNav} id="Alpha">&#913;--Alpha</Link>
+            <Link to="/my_react_lab/beta" onClick={mtoggleNav} id="Beta">&#914;--Beta</Link>
+            <Link to="/my_react_lab/gamma" onClick={mtoggleNav} id="Gamma">&#915;--Gamma</Link>
+            <Link to="/my_react_lab/delta" onClick={mtoggleNav} id="Delta">&#916;--Delta</Link>
+            <Link to="/my_react_lab/epsilon" onClick={mtoggleNav} id="Epsilon">&#917;--Epsilon</Link>
           </div>
           <div className="mappNavbtnsection">
           <button className="mnavbtn" onMouseOver={mtoggleNav}>&#9776;</button>
@@ -98,6 +101,7 @@ function App() {
               <Route path="/my_react_lab/beta" element={<Beta />} />
               <Route path="/my_react_lab/gamma" element={<Gamma />} />
               <Route path="/my_react_lab/delta" element={<Delta />} />
+              <Route path="/my_react_lab/epsilon" element={<Epsilon />} />
             </Routes>
           </div>
         </div>

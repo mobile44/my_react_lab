@@ -4,7 +4,7 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Linechart from "./hooks/Linechart";
 import Barchart from "./hooks/Barchart";
 import Donutchart from "./hooks/Donutchart";
-import { lineChartData,barChartData } from "./data/Datad3";
+import { lineChartData} from "./data/Datad3";
 import "./Delta.css";
 
 function Delta() {
@@ -12,7 +12,7 @@ function Delta() {
   const [selectedGroup, setSelectedGroup] = useState("All");
   const [groupColour, setGroupColour] = useState("lightgrey");
   const lineGroupunique = lineChartData.map((obj)=>{return obj.group}).filter((item, index,arr)=>{return arr.indexOf(item)===index});
-  const barGroupunique = barChartData.map((obj)=>{return obj.group}).filter((item, index,arr)=>{return arr.indexOf(item)===index});
+  /*const barGroupunique = barChartData.map((obj)=>{return obj.group}).filter((item, index,arr)=>{return arr.indexOf(item)===index});*/
 
   useEffect(()=>{
     gsap.from(".title2", {
@@ -43,15 +43,18 @@ function Delta() {
     <div className="deltaPage">
       <div className="deltaTitle">Charts Demo</div>
       <div className="deltaRadios">
+      <button className="deltaBtn" onClick={()=>updateBarChart("All","lightgrey")}>All</button>
+        {/*
         {lineGroupunique && lineGroupunique.map((k,i)=>(
           <label className="deltaRadio" key={i}>{k}
             <input key={i} type="radio" value={i} checked={selectedGroup === k} onChange={()=>setSelectedGroup(k)} />
             <span className="deltaLabel"></span>
           </label>
         ))}
+        */}
       </div>
       <svg viewBox="0 0 85 85" preserveAspectRatio="xMidYMid meet">
-        <Donutchart x={40} y={20} onChangeGroup={updateBarChart} />
+        <Donutchart x={42} y={20} onChangeGroup={updateBarChart} />
         <Linechart
           positionX={20}
           positionY={40}
@@ -59,7 +62,7 @@ function Delta() {
           lineColour={groupColour}
         />
         <Barchart
-          positionX={20}
+          positionX={21}
           positionY={85}
           width={80}
           height={100}

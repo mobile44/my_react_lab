@@ -24,8 +24,23 @@
   cursor: pointer;
 }
 .deltaRadio:hover {
-    color: #ccc;
-  }
+  color: #ccc;
+}
+.deltaBtn {
+  /*position: absolute;*/
+  /*width: 60px;*/
+  transition: 0.3s;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  padding: 20px;
+  /*opacity: 0.3;*/
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(233, 183, 183);
+  color: white;
+  /*z-index: 2;*/
+  /*position: fixed;*/
+}
 @media screen and (min-width: 900px){
   /*
   .deltaPage {
