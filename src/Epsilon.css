@@ -2,21 +2,21 @@
 .epsilonPage{
   overflow-x: hidden;
   font-family: Roboto, sans-serif;
+}
+.epsilonGreen {
+  width: 100ww;
   background-color: seagreen;
 }
-
 /*.epsilonText h1 {
   background: rgba(0,0,0,0.5);
   padding: 50px;
 }*/
-
 .epsilonContainer{
   position: relative;
   width: 50vw;
   opacity: 0.5;
   margin: 0;
 }
-
 .epsilonVideo {
   width: 100%;
   height: 100%;
@@ -35,6 +35,51 @@
 }
 .epsilonText p {
   font-size: 2vw;
+}
+.epsilonSection {
+  display: flex;
+  width: 100vw;
+  height: 50vh;  
+}
+.epsilonOrange {
+  background-color: orange;
+  align-items: center;
+}
+.epsilonOrange p {
+  color: white;
+  margin-left: 40vw;
+}
+.epsilonPink {
+  background-color: pink;
+  align-items: center;
+}
+.epsilonPink p {
+  color: white;
+  margin-left: 40vw;
+}
+.epsilonPurple {
+  background-color: purple;
+  align-items: center;
+}
+.epsilonPurple p {
+  color: white;
+  margin-left: 40vw;
+}
+.epsilonRed {
+  background-color: red;
+  align-items: center;
+}
+.epsilonRed p {
+  color: white;
+  margin-left: 40vw;
+}
+.epsilonGrey {
+  background-color: grey;
+  align-items: center;
+}
+.epsilonGrey p {
+  color: white;
+  margin-left: 40vw;
 }
 /*
 @media (min-aspect-ratio: 16/9) {
