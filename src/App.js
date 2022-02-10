@@ -63,9 +63,6 @@ function App() {
             <Link to="/my_react_lab/gamma" onClick={collapseNav}>&#915;{toggleMenu?"--Gamma":""}</Link>
             <Link to="/my_react_lab/delta" onClick={collapseNav}>&#916;{toggleMenu?"--Delta":""}</Link>
             <Link to="/my_react_lab/epsilon" onClick={collapseNav}>&#917;{toggleMenu?"--Epsilon":""}</Link>
-            <Link to="/">&#918;{toggleMenu?"--Zeta":""}</Link>
-            <Link to="/">&#919;{toggleMenu?"--Eta":""}</Link>
-            <Link to="/">&#920;{toggleMenu?"--Theta":""}</Link>
           </div>
           <div id="appContent" className="appContent" style={contentwidth}>
               <Routes>
