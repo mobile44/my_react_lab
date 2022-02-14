@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my_react_lab/static/css/main.da87acb1.css",
-    "main.js": "/my_react_lab/static/js/main.83df60ae.js",
+    "main.css": "/my_react_lab/static/css/main.90b6e1c7.css",
+    "main.js": "/my_react_lab/static/js/main.4b078997.js",
     "static/js/787.4d701308.chunk.js": "/my_react_lab/static/js/787.4d701308.chunk.js",
     "static/media/videoplayback.mp4": "/my_react_lab/static/media/videoplayback.8d21c3f5b3d5bb5d2c7f.mp4",
     "static/media/ilu_02.png": "/my_react_lab/static/media/ilu_02.8d128e97c038922e8913.png",
@@ -18,12 +18,13 @@
     "static/media/ilu_bg.jpg": "/my_react_lab/static/media/ilu_bg.d157a2b872731c4e7590.jpg",
     "static/media/coffeebean.jpg": "/my_react_lab/static/media/coffeebean.fd7c64e8d68786733e4c.jpg",
     "index.html": "/my_react_lab/index.html",
-    "main.da87acb1.css.map": "/my_react_lab/static/css/main.da87acb1.css.map",
-    "main.83df60ae.js.map": "/my_react_lab/static/js/main.83df60ae.js.map",
+    "static/media/line_data.csv": "/my_react_lab/static/media/line_data.9b82e96aa1ddf4f7e8dc.csv",
+    "main.90b6e1c7.css.map": "/my_react_lab/static/css/main.90b6e1c7.css.map",
+    "main.4b078997.js.map": "/my_react_lab/static/js/main.4b078997.js.map",
     "787.4d701308.chunk.js.map": "/my_react_lab/static/js/787.4d701308.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.da87acb1.css",
-    "static/js/main.83df60ae.js"
+    "static/css/main.90b6e1c7.css",
+    "static/js/main.4b078997.js"
   ]
 }
