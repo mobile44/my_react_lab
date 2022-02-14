@@ -4,14 +4,14 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Linechart from "./hooks/Linechart";
 import Barchart from "./hooks/Barchart";
 import Donutchart from "./hooks/Donutchart";
-import { lineChartData} from "./data/Datad3";
+//import { lineChartData} from "./data/Datad3";
 import "./Delta.css";
 
 function Delta() {
   gsap.registerPlugin(ScrollTrigger);
   const [selectedGroup, setSelectedGroup] = useState("All");
   const [groupColour, setGroupColour] = useState("lightgrey");
-  const lineGroupunique = lineChartData.map((obj)=>{return obj.group}).filter((item, index,arr)=>{return arr.indexOf(item)===index});
+  //const lineGroupunique = lineChartData.map((obj)=>{return obj.group}).filter((item, index,arr)=>{return arr.indexOf(item)===index});
   /*const barGroupunique = barChartData.map((obj)=>{return obj.group}).filter((item, index,arr)=>{return arr.indexOf(item)===index});*/
 
   useEffect(()=>{

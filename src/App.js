@@ -6,6 +6,7 @@ import Beta from './Beta';
 import Gamma from './Gamma';
 import Delta from './Delta';
 import Epsilon from './Epsilon';
+import Zeta from './Zeta';
 
 function App() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -63,6 +64,7 @@ function App() {
             <Link to="/my_react_lab/gamma" onClick={collapseNav}>&#915;{toggleMenu?"--Gamma":""}</Link>
             <Link to="/my_react_lab/delta" onClick={collapseNav}>&#916;{toggleMenu?"--Delta":""}</Link>
             <Link to="/my_react_lab/epsilon" onClick={collapseNav}>&#917;{toggleMenu?"--Epsilon":""}</Link>
+            <Link to="/my_react_lab/zeta" onClick={collapseNav}>&#918;{toggleMenu?"--Zeta":""}</Link>
           </div>
           <div id="appContent" className="appContent" style={contentwidth}>
               <Routes>
@@ -72,6 +74,7 @@ function App() {
               <Route path="/my_react_lab/gamma" element={<Gamma />} />
               <Route path="/my_react_lab/delta" element={<Delta />} />
               <Route path="/my_react_lab/epsilon" element={<Epsilon />} />
+              <Route path="/my_react_lab/zeta" element={<Zeta />} />
               </Routes>
           </div>
         </div>
@@ -86,6 +89,7 @@ function App() {
             <Link to="/my_react_lab/gamma" onClick={mtoggleNav} id="Gamma">&#915;--Gamma</Link>
             <Link to="/my_react_lab/delta" onClick={mtoggleNav} id="Delta">&#916;--Delta</Link>
             <Link to="/my_react_lab/epsilon" onClick={mtoggleNav} id="Epsilon">&#917;--Epsilon</Link>
+            <Link to="/my_react_lab/zeta" onClick={mtoggleNav} id="Zeta">&#918;--Zeta</Link>
           </div>
           <div className="mappNavbtnsection">
           <button className="mnavbtn" onMouseOver={mtoggleNav}>&#9776;</button>
@@ -99,6 +103,7 @@ function App() {
               <Route path="/my_react_lab/gamma" element={<Gamma />} />
               <Route path="/my_react_lab/delta" element={<Delta />} />
               <Route path="/my_react_lab/epsilon" element={<Epsilon />} />
+              <Route path="/my_react_lab/zeta" element={<Zeta />} />
             </Routes>
           </div>
         </div>
