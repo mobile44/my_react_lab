@@ -74,7 +74,7 @@ function App() {
               <Route path="/my_react_lab/gamma" element={<Gamma />} />
               <Route path="/my_react_lab/delta" element={<Delta />} />
               <Route path="/my_react_lab/epsilon" element={<Epsilon />} />
-              <Route path="/my_react_lab/zeta" element={<Zeta />} />
+              <Route path="/my_react_lab/zeta" element={<Zeta winWidth={screenWidth}/>} />
               </Routes>
           </div>
         </div>
@@ -103,7 +103,7 @@ function App() {
               <Route path="/my_react_lab/gamma" element={<Gamma />} />
               <Route path="/my_react_lab/delta" element={<Delta />} />
               <Route path="/my_react_lab/epsilon" element={<Epsilon />} />
-              <Route path="/my_react_lab/zeta" element={<Zeta />} />
+              <Route path="/my_react_lab/zeta" element={<Zeta winWidth={screenWidth}/>} />
             </Routes>
           </div>
         </div>

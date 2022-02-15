@@ -5,6 +5,7 @@ import "./Zeta.css";
 //import globalBrand from "./data/global_brands.csv";
 
 const parseTime = d3.timeParse("%d-%b-%y");
+const format = d3.timeFormat("%d-%b-%y");
 /*
 const lineData = [
   {x:10,y:20},
@@ -51,6 +52,12 @@ const createGraph = async()=>{
   svg3
     .append("g")
     .call(d3.axisLeft(y2));
+
+  svg3
+    .append("text")
+    .attr("class","tooltip_text");
+
+  const text = d3.select(".tooltip_text");
   
   const valueLine = d3.line()
     .x((d)=>{return x2(d.date);})
@@ -61,11 +68,15 @@ const createGraph = async()=>{
     .attr("class","line")
     .attr("d",valueLine);
 
-  const tooltip = d3
-    .select("#area3")
+  const tooltip = svg3
+    //.select("#area3")
     .append('div')
     .attr('class','tooltip')
-    .style('opacity',0);
+    .style('opacity',0)
+    .style("border","solid")
+    .style("border-width","2px")
+    .style("border-radius","5px")
+    .style("padding", "5px");
 
   const focus = svg3
     .append('g')
@@ -82,11 +93,14 @@ const createGraph = async()=>{
     .style('opacity',0)
     .on('mouseover',()=>{
       focus.style('display',null);
-    })
+      tooltip.style("opacity",1);
+    },mousemove)
     .on('mouseout',()=>{
       tooltip
         .transition()
         .duration(300)
+        .style('opacity',0);
+      text
         .style('opacity',0);
     })
     .on('mousemove',mousemove);
@@ -101,21 +115,25 @@ const createGraph = async()=>{
       'transform',
       `translate(${x2(d0.date)},${y2(d0.close)})`,
     );
+    text
+      .style('opacity',1)
+      .attr('transform',`translate(${x2(d0.date)},${y2(d0.close)})`)
+      .text(d0.close + " " + format(d0.date));
     tooltip
       .transition()
       .duration(300)
       .style('opacity',0.9);
     tooltip
-      .html(d0.tooltipContent || d0.date)
+      .html("hello") //(d0.tooltipContent || d0.date)
       .style(
         'transform',
-        `translate(${x2(d0.date)+30}px,${y2(d0.close)-30}px)`
+        `translate(${x2(d0.date)+30}px,${y2(d0.close)-30}px)`,
       );
-    
   }
 }
 
-function Zeta() {
+function Zeta(props) {
+
   useEffect(()=>{
     /*
     d3.select("#target").style("stroke-width",5);
@@ -162,7 +180,7 @@ function Zeta() {
     */
     
     createGraph();
-  },[]);
+  });
 
   return (
     <div className="zetaPage">
@@ -191,8 +209,18 @@ function Zeta() {
       
       <svg id="area2" height={400} width={500}></svg>
       */}
-      <svg id="area3"></svg>
-    
+      {(props.winWidth>=900) && (
+      <svg id="area3" viewBox="100 -50 600 600" preserveAspectRatio="xMidYMid meet"></svg>
+      )}
+      {(props.winWidth>=700) && (props.winWidth<900) && (
+      <svg id="area3" viewBox="250 -100 750 750" preserveAspectRatio="xMidYMid meet"></svg>
+      )}
+      {(props.winWidth>=550) && (props.winWidth<700) && (
+      <svg id="area3" viewBox="350 -100 900 900" preserveAspectRatio="xMidYMid meet"></svg>
+      )}
+      {(props.winWidth<550) && (
+        <svg id="area3" viewBox="500 -100 1000 1000" preserveAspectRatio="xMidYMid meet"></svg>
+      )}
     </div>
   )
 }
