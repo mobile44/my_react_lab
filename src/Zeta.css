@@ -1,8 +1,30 @@
 .zetaPage {
   background-color: rgb(195, 241, 219);
+  width: 100%;
+  height: 100%;
 }
 .line {
   fill: none;
   stroke: steelblue;
   stroke-width: 2px;
 }
+/*
+.zetaDot0 {
+  fill: green;
+}
+.zetaDot0:hover {
+  fill:rgb(208, 247, 208);
+}
+.zetaDot1 {
+  fill: blue;
+}
+.zetaDot1:hover {
+  fill: rgb(185, 185, 236);
+}
+.zetaDot2 {
+  fill: red;
+}
+.zetaDot2:hover {
+  fill: rgb(243, 187, 187);
+}
+*/
